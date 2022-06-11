@@ -1,0 +1,155 @@
+:root {
+
+    /* fonts */
+    --mai-font: "open sans";
+    --secondary-font: "raleway";
+
+    /* text colors */
+    --accent-color: #FF6C00;
+    --main-dark-theme: #ffffff;
+    --main-light-theme: #303030;
+
+    /* bg-colors */
+
+    /* others */
+
+}
+
+
+
+body {
+    font-family: var(--mai-font), sans-serif;
+    font-size: 18px;
+    line-height: 1.67;
+    
+}
+
+/* common styles start */
+.link {
+    text-decoration: none;
+}
+
+.list {
+    list-style: none;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.34;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--accent-color);
+    color: var(--main-dark-theme);
+}
+
+.btn-mode-light {
+    color: var(--main-light-theme);
+
+}
+
+.btn-mode-dark {
+    color: var(--main-dark-theme);
+
+}
+
+.sosials-link {
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 1.19;
+    letter-spacing: 0.2em;
+    color: var(--main-light-theme);
+
+
+}
+
+.sosials-link:hover,
+.sosials-link:focus {
+    color: var(--accent-color);
+}
+
+.uppertitle {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 1.37;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    
+        
+}
+
+.uppertitle-mode-light {
+    color:var(--main-dark-theme);
+}
+
+.uppertitle-mode-dark {
+    color: rgba(157, 164, 189, 0.6);
+}
+
+.main-title {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 1.18;
+    letter-spacing: 0.05em;
+    color: var(--main-dark-theme);
+    }
+
+.section-title {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+     
+
+}
+
+.section-title-mode-light {
+    color:var(--main-light-theme);
+
+}
+
+.section-title-mode-dark {
+    color: var(--main-dark-theme);
+
+}
+/* common styles end */
+
+
+/* header section */
+.header {
+    background-color: #191C26;
+}
+.header-link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.34;
+    letter-spacing: 0.1em;
+    color: var(--main-dark-theme);
+}
+
+.header-link:hover,
+.header-link:focus {
+    color: var(--accent-color);
+}
+
+.header-contact {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color:var(--main-dark-theme);
+}
+
+.current-link {
+    color: var(--accent-color);
+}
