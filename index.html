@@ -12,13 +12,15 @@
     rel="stylesheet">
     <!--Normalize styles-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
+    <!-- Animate.css start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Кастомні стилі-->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body data-body>
 
     <!--Секція хедер-->
-    <header class="page-header">
+    <header class="page-header" data-header>
         <div class="container header-container">
         <a class="header-logo" href="./index.html">
             <img class="header-img" src="./images/header/Logo.svg" alt="Логотип Barbershop" width="69" height="56">
@@ -41,7 +43,7 @@
         </nav>
         <div class="header-group">
             <a class="header-contact link" href="mailto:+380441111111">+38 044 111 11 11</a>
-            <button class="header-btn btn btn-mode-dark " type="button">онлайн-запись</button>
+            <button class="header-btn btn btn-mode-dark animate__animated animate__bounce" type="button" data-modal-open>онлайн-запись</button>
         </div>
         </div>
     </header>
@@ -50,7 +52,8 @@
     <main>
         <!--Секція Hero-->
         <section class="hero">
-            <div class="container">
+            <div class="container hero-container">
+                <div class="hero-left-side">
             <ul class="hero-list list">
                 <li class="hero-item">
                     <a class="hero-link link sosials-link" href="">Instagram</a>
@@ -59,18 +62,21 @@
                     <a class="hero-link link sosials-link" href="">Youtube</a>
                 </li>
             </ul>
+            </div>
 
+            <div class="hero-right-side">
             <p class="uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
             <h1 class="main-title">BarberShop</h1>
             <p class="hero-descr">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+            </div>
 
-            <ul class="list">
-                <li>Слайд1</li>
-                <li>Слайд2</li>
-                <li>Слайд3</li>
+            <ul class="slider-pagination list">
+                <li class="slider-pagination-item current"></li>
+                <li class="slider-pagination-item"></li>
+                <li class="slider-pagination-item"></li>
             </ul>
 
-            <ul class="list">
+            <ul class="slider-controls list">
                 <li>
                     <button class="slider-btn slider-btn-prev" type="button">Назад</button>
                 </li>
@@ -323,15 +329,31 @@
             <ul class="portfolio-list list card-set">
                 <li class="portfolio-item card-set-item">
                     <img class="portfolio-pic" src="./images/portfolio/gallery-1.jpg" alt="Примеры работ 1" width="270" height="360">
+                    <div class="portfolio-overlay">
+                        <p class="portfolio-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Ipsa, tenetur!</p>
+                    </div>
                 </li>
                 <li class="portfolio-item card-set-item">
                     <img class="portfolio-pic" src="./images/portfolio/gallery-2.jpg" alt="Примеры работ 2" width="270" height="360">
+                    <div class="portfolio-overlay">
+                        <p class="portfolio-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Ipsa, tenetur!</p>
+                    </div>
                 </li>
                 <li class="portfolio-item card-set-item">
                     <img class="portfolio-pic" src="./images/portfolio/gallery-3.jpg" alt="Примеры работ 3" width="270" height="360">
+                    <div class="portfolio-overlay">
+                        <p class="portfolio-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Ipsa, tenetur!</p>
+                    </div>
                 </li>
                 <li class="portfolio-item card-set-item">
                     <img class="portfolio-pic" src="./images/portfolio/gallery-4.jpg" alt="Примеры работ 4" width="270" height="360">
+                    <div class="portfolio-overlay">
+                        <p class="portfolio-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, tenetur! Lorem ipsum dolor
+                            sit amet consectetur adipisicing elit. Ipsa, tenetur!</p>
+                    </div>
                 </li>
             </ul>
             </div>
@@ -400,5 +422,20 @@
         </ul>
         </div>
     </footer>
+
+    <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close-btn" type="button" data-modal-close>
+                <svg width="20" height="20">
+                    <use href="./images/spriteicon.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
+    
 </body>
 </html>
