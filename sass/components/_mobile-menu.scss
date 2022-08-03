@@ -1,0 +1,40 @@
+.mobile-menu-btn {
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    z-index: 1000;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.mobile-menu-burger {
+    transition: 500ms;
+
+    .mobile-menu-btn.is-open & {
+        opacity: 0;
+    }
+}
+
+.mobile-menu-close {
+    opacity: 0;
+    transition: 500ms;
+
+    .mobile-menu-btn.is-open & {
+        opacity: 1;
+    }
+}
+
+/**
+  |============================
+  | Mobile menu styles
+  |============================
+*/

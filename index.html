@@ -1,404 +1,920 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=?, initial-scale=1.0">
-    <title>BARBERSHOP</title>
-    <!--Шрифти-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
-    rel="stylesheet">
-    <!--Normalize styles-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css">
-    <!--Кастомні стилі-->
-    <link rel="stylesheet" href="./css/styles.css">
-</head>
-<body>
 
-    <!--Секція хедер-->
-    <header class="page-header">
-        <div class="container header-container">
-        <a class="header-logo" href="./index.html">
-            <img class="header-img" src="./images/header/Logo.svg" alt="Логотип Barbershop" width="69" height="56">
-        </a>
-        <nav class="header-nav">
-            <ul class="header-list list">
-                <li class="header-list-item">
-                    <a class="header-link link current-link" href="">О нас</a>
-                </li>
-                <li class="header-list-item">
-                    <a class="header-link link" href="">Услуги и цены</a>
-                </li>
-                <li class="header-list-item">
-                    <a class="header-link link" href="">Мастера</a>
-                </li>
-                <li class="header-list-item">
-                    <a class="header-link link" href="./contacts.html">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header-group">
-            <a class="header-contact link" href="mailto:+380441111111">+38 044 111 11 11</a>
-            <button class="header-btn btn btn-mode-dark " type="button">онлайн-запись</button>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FE Core 58</title>
+    <!-- Fonts start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+        rel="stylesheet" />
+    <!-- Fonts end -->
+
+    <!-- Normalize styles start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css" />
+    <!-- Normalize styles end -->
+
+    <!-- Animate.css start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- Animate.css end -->
+
+    <!-- Choices base CSS (optional)start -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/base.min.css" /> -->
+    <!-- Choices base CSS (optional)end -->
+
+    <!-- Choices CSS start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <!-- Choices CSS end -->
+
+    <!-- custom styles start -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- custom styles end -->
+</head>
+
+<body data-body>
+    <!-- Секція хедер -->
+    <header class="header" data-header>
+        <div class="container header__container">
+            <a class="header__logo logo" href="./index.html" aria-label="Логотип BarberShop">
+                <svg class="logo__icon" width="69" height="56">
+                    <use href="./images/icons.svg#logo"></use>
+                </svg>
+            </a>
+
+            <button class="mobile-menu-btn" type="button" data-menu-button>
+                <svg class="mobile-menu-icon" width="24" height="16">
+                    <use class="mobile-menu-burger" href="./images/icons.svg#burger-menu"></use>
+                    <use class="mobile-menu-close" href="./images/icons.svg#menu-close"></use>
+                </svg>
+            </button>
+
+            <!-- Мобільне меню -->
+            <div class="mobile-menu" data-menu>
+                <ul class="mobile-menu-nav list">
+                    <li class="mobile-menu-nav-item">
+                        <a class="link current" href="">Студия </a>
+                    </li>
+                    <li class="mobile-menu-nav-item">
+                        <a class="link" href="">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu-nav-item">
+                        <a class="link" href="">Контакты</a>
+                    </li>
+                </ul>
+
+                <ul class="mobile-menu-contacts list">
+                    <li class="mobile-menu-contacts-item">
+                        <a class="link accent" href=""> +38 096 111 11 11 </a>
+                    </li>
+                    <li class="mobile-menu-contacts-item">
+                        <a class="link" href="">info@devstudio.com</a>
+                    </li>
+                </ul>
+
+                <ul class="mobile-menu-socials list">
+                    <li class="mobile-menu-socials-item">
+                        <a class="mobile-menu-socials-link link" href=""> Instagram </a>
+                    </li>
+                    <li class="mobile-menu-socials-item">
+                        <a class="mobile-menu-socials-link link" href="">Twitter</a>
+                    </li>
+                    <li class="mobile-menu-socials-item">
+                        <a class="mobile-menu-socials-link link" href="">Facebook</a>
+                    </li>
+                    <li class="mobile-menu-socials-item">
+                        <a class="mobile-menu-socials-link link" href="">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav__list list">
+                    <li class="nav__item">
+                        <a class="nav__link nav__link--current link" href="">Главная </a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="">Услуги и цены</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="">Мастера</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__link link" href="./contatcs.html">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__group">
+                <a class="header__contact link" href="tel:+380441111111">+38 044 111 11 11</a>
+                <button class="header__btn btn btn--mode-dark animate__animated animate__bounce" type="button"
+                    data-modal-open>онлайн-запись</button>
+            </div>
         </div>
     </header>
 
-    <!--Блок унікального контенту на сторінці-->
+    <!-- Блок унікального контенту на сторінці -->
     <main>
-        <!--Секція Hero-->
+        <!-- Секція Hero -->
         <section class="hero">
-            <div class="container">
-            <ul class="hero-list list">
-                <li class="hero-item">
-                    <a class="hero-link link sosials-link" href="">Instagram</a>
-                </li>
-                <li>
-                    <a class="hero-link link sosials-link" href="">Youtube</a>
-                </li>
-            </ul>
-
-            <p class="uppertitle uppertitle-mode-dark" lang="en">A hair salon for men in Kyiv</p>
-            <h1 class="main-title">BarberShop</h1>
-            <p class="hero-descr">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
-
-            <ul class="list">
-                <li>Слайд1</li>
-                <li>Слайд2</li>
-                <li>Слайд3</li>
-            </ul>
-
-            <ul class="list">
-                <li>
-                    <button class="slider-btn slider-btn-prev" type="button">Назад</button>
-                </li>
-                <li>
-                    <button class="slider-btn slider-btn-next" type="button">Вперед</button>
-                </li>
-            </ul>
-            </div>
-        </section>
-
-        <!--Секція About-->
-        <section class="about section">
-            <div class="container about-container">
-            <ul class="about-list list">
-                <li class="about-item">
-                    <img class="about-pic" src="./images/about/img1.jpg" alt="Бритье бороды" width="270" height="445">
-                </li>
-                <li class="about-item">
-                    <img class="about-pic" src="./images/about/img2.jpg" alt="Бритье опасной бритвой" width="270" height="445">
-                </li>
-            </ul>
-            <div class="about-group">
-                <p class="uppertitle uppertitle-mode-like">О НАС</p>
-                <h2 class="section-title section-title-mode-light">Лучший Барбершоп
-                твоего города</h2>
-                <p class="section-subtitle section-subtitle-mode-light">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-                <p class="about-descr">Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-                    готовы усовершенствовать каждого, кто к нам приходит!</p>
-                <button class="btn btn-mode-light" type="button">онлайн-запись</button>
-            </div>
-            </div>
-        </section>
-
-        <!--Секція Price-->
-        <section class="price section">
-            <div class="container">
-            <p class="uppertitle uppertitle-mode-dark">Проведи время в компании лучших мастеров</p>
-            <h2 class="section-title section-title-mode-dark price-title">Услуги и цены</h2>
-            <ul class="price-list list">
-                <li class="price-list-item">
-                    <ul class="price-inner-list list">
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Мужская стрижка</span> 
-                            <span class="price-inner-cost">от 300 грн.</span> 
+            <div class="container hero-container">
+                <div class="hero-left-side">
+                    <ul class="hero-list list">
+                        <li class="hero-item">
+                            <a class="hero-link link socials-link" href="">Instagram</a>
                         </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Стрижка бороды</span>  
-                            <span class="price-inner-cost">от 200 грн.</span>
-                        </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Стрижка усов</span>  
-                            <span class="price-inner-cost">от 200 грн.</span>
-                        </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Бритье опасной бритвой</span> 
-                            <span class="price-inner-cost">от 200 грн.</span>
+                        <li class="hero-item">
+                            <a class="hero-link link socials-link" href="">Youtube</a>
                         </li>
                     </ul>
-                </li>
-                <li class="price-list-item">
-                    <ul class="price-inner-list list">
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Cтрижка у стажера</span> 
-                            <span class="price-inner-cost">от 50 грн.</span> 
-                        </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Стрижка под насадку</span> 
-                            <span class="price-inner-cost">от 200 грн.</span> 
-                        </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Детская стрижка (до 12 лет)</span> 
-                            <span class="price-inner-cost">от 300 грн.</span> 
-                        </li>
-                        <li class="price-inner-item">
-                            <span class="price-inner-desc">Камуфлирование седины</span> 
-                            <span class="price-inner-cost">от 200 грн.</span> 
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <button class="btn btn-mode-dark price-btn" type="button">онлайн-запись</button>
-            </div>
-        </section>
+                </div>
 
-        <!--Секція Benefits-->
-        <section class="benefits section">
-            <div class="container">
-            <ul class="benefits-list list">
-                <li class="benefits-item">
-                    <p class="benefits-amount">600</p>
-                    <sub class="benefits-decor">&#43;</sub>
-                    <p class="benefits-descr">Довольных клиентов в день</p>
-                </li>
-            </ul>
-            <ul class="list">
-                <li class="benefits-item">
-                    <p class="benefits-amount">50</p>
-                    <sub class="benefits-decor">&#43;</sub>
-                    <p class="benefits-descr">Наград за отличный сервис</p>
-                </li>
-            </ul>
-            <ul class="list">
-                <li class="benefits-item">
-                    <p class="benefits-amount">20</p>
-                    <sub class="benefits-decor">&#43;</sub>
-                    <p class="benefits-descr">Лучших мастеров Киева</p>
-                </li>
-            </ul>
-            <ul class="list">
-                <li class="benefits-item">
-                    <p class="benefits-amount">100</p>
-                    <sub class="benefits-decor">&#43;</sub>
-                    <p class="benefits-descr">Подарков постоянным клиентам</p>
-                </li>
-            </ul>
-            <div>
-                <p class="uppertitle uppertitle-mode-light">старая традиционная школа</p>
-                <h2 class="section-title section-title-mode-light">Почему приходят именно к нам?</h2>
-                <p class="section-subtitle section-subtitle-mode-light">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
-            </div>
-           </div>
-        </section>
+                <div class="hero-right-side">
+                    <p class="uppertitle uppertitle--mode-dark" lang="en">A hair salon for men in Kyiv</p>
+                    <h1 class="main-title">BarberShop</h1>
+                    <p class="hero-descr">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.
+                    </p>
+                </div>
 
-        <!--Секція Team-->
-        <section class="team section">
-            <div class="container">
-            <p class="uppertitle uppertitle-mode-light">для настоящих ценителей атмосферы</p>
-            <h2 class="team-title section-title section-title-mode-light">Наши мастера</h2>
-            <ul class="team-list card-set list">
-                <li class="team-item card-set-item">
-                    <img class="team-avatar" src="./images/team/img-1.jpg" alt="John Smith" width="370" height="346">
-                    <div class="team-wrapper">
-                    <h3 class="team-subtitle" lang="en">John Smith</h3>
-                    <p class="team-position" lang="en">Extreme Barber</p>
-                    <ul class="social-media list">
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-                            <svg class="social-media-icon" width="20" height="20">
-                                <use class="social-media-icon" href="./images/spriteicon.svg#instagram"></use>
-                            </svg>
-                        </a>
+                <ul class="slider-pagination list">
+                    <li class="slider-pagination-item current"></li>
+                    <li class="slider-pagination-item"></li>
+                    <li class="slider-pagination-item"></li>
+                </ul>
+
+                <ul class="slider-controls list">
+                    <li>
+                        <button class="slider-btn slider-btn-prev" type="button">Назад</button>
                     </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter">
-                                <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/spriteicon.svg#twitter"></use>
-                            </svg>
-                        </a>
+                    <li>
+                        <button class="slider-btn slider-btn-next" type="button">Вперед</button>
                     </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-                                <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/spriteicon.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedink">
-                                <svg class="social-media-icon" width="20" height="20">
-                                <use href="./images/spriteicon.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    </ul>
-                    </div>
-                </li>
-                <li class="team-item card-set-item">
-                    <img src="./images/team/img-2.jpg" alt="Michele Doe" width="370" height="346">
-                    <div class="team-wrapper">
-                    <h3 class="team-subtitle" lang="en">Michele Doe</h3>
-                    <p class="team-position" lang="en">Extreme Barber</p>
-                    <ul class="social-media list">
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use class="social-media-icon" href="./images/spriteicon.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedink">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    </div>
-                </li>
-                <li class="team-item card-set-item">
-                    <img src="./images/team/img-3.jpg" alt="Michele Doe" width="370" height="346">
-                    <div class="team-wrapper">
-                    <h3 class="team-subtitle" lang="en">Alan Black</h3>
-                    <p class="team-position" lang="en">Extreme Barber</p>
-                    <ul class="social-media list">
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use class="social-media-icon" href="./images/spriteicon.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="social-media-item">
-                            <a class="social-media-link link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedink">
-                                <svg class="social-media-icon" width="20" height="20">
-                                    <use href="./images/spriteicon.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        </section>
-
-        <!--Секція Portfolio-->
-        <section class="portfolio section">
-            <div class="container">
-            <p class="uppertitle uppertitle-mode-light">На латинском языке “барба” означает “борода”</p>
-            <h2 hidden>Приеры работ</h2>
-            <ul class="portfolio-list list card-set">
-                <li class="portfolio-item card-set-item">
-                    <img class="portfolio-pic" src="./images/portfolio/gallery-1.jpg" alt="Примеры работ 1" width="270" height="360">
-                </li>
-                <li class="portfolio-item card-set-item">
-                    <img class="portfolio-pic" src="./images/portfolio/gallery-2.jpg" alt="Примеры работ 2" width="270" height="360">
-                </li>
-                <li class="portfolio-item card-set-item">
-                    <img class="portfolio-pic" src="./images/portfolio/gallery-3.jpg" alt="Примеры работ 3" width="270" height="360">
-                </li>
-                <li class="portfolio-item card-set-item">
-                    <img class="portfolio-pic" src="./images/portfolio/gallery-4.jpg" alt="Примеры работ 4" width="270" height="360">
-                </li>
-            </ul>
+                </ul>
             </div>
         </section>
-        <!--Секція Contacts-->
+
+        <!-- Секція About -->
+        <section class="about">
+				<div class="container about-container">
+					<ul class="about-list list">
+						<li class="about-item">
+
+                            <picture>
+                                <!-- desktop screen -->
+                                <source media="(min-width: 1200px)" srcset="./images/about/img-1_lg.webp 1x, ./images/about/img-1_lg@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width: 1200px)" srcset="./images/about/img-1_lg.jpg 1x, ./images/about/img-1_lg@2x.jpg 2x"
+                                    type="image/jpg" />
+                            
+                                <!-- tablet screen -->
+                                <source media="(min-width: 768px)" srcset="./images/about/img-1_md.webp 1x, ./images/about/img-1_md@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width: 768px)" srcset="./images/about/img-1_md.jpg 1x, ./images/about/img-1_md@2x.jpg 2x"
+                                    type="image/jpg" />
+                            
+                                <!-- mobile screen -->
+                                <source media="(max-width: 767px)" srcset="./images/about/img-1_sm.webp 1x, ./images/about/img-1_sm@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width: 767px)" srcset="./images/about/img-1_sm.jpg 1x, ./images/about/img-1_sm@2x.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="about-pic" src="./images/about/img-1.jpg" alt="Бритье бороды" width="270" height="445" />
+                            </picture>
+
+							
+						</li>
+						<li class="about-item">
+
+                            <picture>
+                                <!-- desktop screen -->
+                                <source media="(min-width: 1200px)" srcset="./images/about/img-2_lg.webp 1x, ./images/about/img-2_lg@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width: 1200px)" srcset="./images/about/img-2_lg.jpg 1x, ./images/about/img-2_lg@2x.jpg 2x"
+                                    type="image/jpg" />
+                            
+                                <!-- tablet screen -->
+                                <source media="(min-width: 768px)" srcset="./images/about/img-2_md.webp 1x, ./images/about/img-2_md@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(min-width: 768px)" srcset="./images/about/img-2_md.jpg 1x, ./images/about/img-2_md@2x.jpg 2x"
+                                    type="image/jpg" />
+                            
+                                <!-- mobile screen -->
+                                <source media="(max-width: 767px)" srcset="./images/about/img-2_sm.webp 1x, ./images/about/img-2_sm@2x.webp 2x"
+                                    type="image/webp" />
+                                <source media="(max-width: 767px)" srcset="./images/about/img-2_sm.jpg 1x, ./images/about/img-2_sm@2x.jpg 2x"
+                                    type="image/jpg" />
+                                <img class="about-pic" src="./images/about/img-2.jpg" alt="Бритье опасной бритвой" width="270" height="445" />
+                            </picture>
+							
+						</li>
+					</ul>
+					<div class="about-group">
+						<p class="uppertitle uppertitle--mode-light">О НАС</p>
+						<h2 class="title title--mode-light">Лучший Барбершоп твоего города</h2>
+						<p class="section-subtitle section-subtitle-mode-light">
+							Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.
+						</p>
+						<p class="about-descr">
+							Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки
+							нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной
+							волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!
+						</p>
+						<button class="btn btn--mode-light" type="button">онлайн-запись</button>
+					</div>
+				</div>
+			</section>
+
+        <!-- Секція Price -->
+        <section class="price">
+				<div class="container">
+					<p class="uppertitle uppertitle--mode-dark">Проведи время в компании лучших мастеров</p>
+					<h2 class="title title--mode-dark price-title">Услуги и цены</h2>
+					<ul class="price-list list">
+						<li class="price-list-item">
+							<ul class="price-inner-list list">
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Мужская стрижка</span>
+									<span class="price-inner-cost">от 300 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Стрижка бороды</span>
+									<span class="price-inner-cost">от 200 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Стрижка усов</span>
+									<span class="price-inner-cost">от 200 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Бритье опасной бритвой</span>
+									<span class="price-inner-cost">от 200 грн.</span>
+								</li>
+							</ul>
+						</li>
+						<li class="price-list-item">
+							<ul class="price-inner-list list">
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Cтрижка у стажера</span>
+									<span class="price-inner-cost">от 50 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Стрижка под насадку</span>
+									<span class="price-inner-cost">от 200 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Детская стрижка (до 12 лет)</span>
+									<span class="price-inner-cost">от 300 грн.</span>
+								</li>
+								<li class="price-inner-item">
+									<span class="price-inner-desc">Камуфлирование седины</span>
+									<span class="price-inner-cost">от 200 грн.</span>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<button class="btn btn--mode-dark price-btn" type="button">онлайн-запись</button>
+				</div>
+			</section>
+
+        <!-- Секція Benefits -->
+        <section class="benefits">
+				<div class="container benefits-container">
+					<div class="benefits-left-side">
+						<ul class="benefits-list list">
+							<li class="benefits-item">
+								<p class="benefits-amount">600</p>
+								<p class="benefits-descr">Довольных клиентов в день</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">50</p>
+								<p class="benefits-descr">Наград за отличный сервис</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">20</p>
+								<p class="benefits-descr">Лучших мастеров Киева</p>
+							</li>
+							<li class="benefits-item">
+								<p class="benefits-amount">100</p>
+								<p class="benefits-descr">Подарков постоянным клиентам</p>
+							</li>
+						</ul>
+					</div>
+					<div class="benefits-right-side">
+						<p class="uppertitle uppertitle--mode-light">старая традиционная школа</p>
+						<h2 class="title title--mode-light">Почему приходят именно к нам?</h2>
+						<p class="section-subtitle section-subtitle-mode-light">
+							О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.
+						</p>
+					</div>
+				</div>
+			</section>
+
+        <!-- Секція Team -->
+        <section class="team">
+            <div class="container">
+                <p class="uppertitle uppertitle--mode-light">для настоящих ценителей атмосферы</p>
+                <h2 class="team__title title title--mode-light">Наши мастера</h2>
+
+                <ul class="team__list card-set list">
+                    <li class="team__item card-set__item">
+                        <!-- Дескриптор х -->
+                        <!-- <img
+								class="team__avatar"
+								srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+								src="./images/team/img-1_sm.jpg"
+								alt="John Smith"
+								width="418"
+								height="346"
+							/> -->
+
+                        <!-- Дескриптор w -->
+                        <!-- <img
+								class="team__avatar"
+								srcset="
+									./images/team/w/img-370.jpg 370w,
+									./images/team/w/img-418.jpg 418w,
+									./images/team/w/img-450.jpg 450w,
+									./images/team/w/img-740.jpg 740w,
+									./images/team/w/img-836.jpg 836w,
+									./images/team/w/img-900.jpg 900w
+								"
+								sizes="(min-width: 1200px) 370px, (min-width: 768px) 450px, (max-width: 767px) 418px, 100vw"
+								src="./images/team/img-1_sm.jpg"
+								alt="John Smith"
+								width="418"
+								height="346"
+							/> -->
+
+                        <!-- Тег picture -->
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-1_lg.webp 1x, ./images/team/img-1_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-1_lg.jpg 1x, ./images/team/img-1_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-1_md.webp 1x, ./images/team/img-1_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-1_md.jpg 1x, ./images/team/img-1_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-1_sm.webp 1x, ./images/team/img-1_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-1_sm.jpg 1x, ./images/team/img-1_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-1_sm.jpg" alt="John Smith" width="418" height="346" />
+                        </picture>
+
+                        <div class="team__wrapper">
+                            <h3 class="team__subtitle" lang="en">John Smith</h3>
+                            <p class="team__position" lang="en">Extreme Barber</p>
+                            <ul class="social-media list">
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="instagram">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="twitter">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="facebook">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="linkedin">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="team__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-2_lg.webp 1x, ./images/team/img-2_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-2_lg.jpg 1x, ./images/team/img-2_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-2_md.webp 1x, ./images/team/img-2_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-2_md.jpg 1x, ./images/team/img-2_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-2_sm.webp 1x, ./images/team/img-2_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-2_sm.jpg 1x, ./images/team/img-2_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-2_sm.jpg" alt="Michele Doe" width="418" height="346" />
+                        </picture>
+                        <div class="team__wrapper">
+                            <h3 class="team__subtitle" lang="en">Michele Doe</h3>
+                            <p class="team__position" lang="en">Extreme Barber</p>
+                            <ul class="social-media list">
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="instagram">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="twitter">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="facebook">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="linkedin">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="team__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-3_lg.webp 1x, ./images/team/img-3_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/img-3_lg.jpg 1x, ./images/team/img-3_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-3_md.webp 1x, ./images/team/img-3_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/img-3_md.jpg 1x, ./images/team/img-3_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-3_sm.webp 1x, ./images/team/img-3_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/team/img-3_sm.jpg 1x, ./images/team/img-3_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/team/img-3_sm.jpg" alt="Alan Black" width="418" height="346" />
+                        </picture>
+                        <div class="team__wrapper">
+                            <h3 class="team__subtitle" lang="en">Alan Black</h3>
+                            <p class="team__position" lang="en">Extreme Barber</p>
+                            <ul class="social-media list">
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="instagram">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-instagram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="twitter">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-twitter"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="facebook">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-facebook"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social-media__item">
+                                    <a class="social-media__link link" href="" target="_blank" rel="noopener noreferrer"
+                                        aria-label="linkedin">
+                                        <svg class="social-media__icon" width="20" height="20">
+                                            <use href="./images/icons.svg#icon-linkedin"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Секція Portfolio -->
+        <section class="portfolio">
+            <div class="container">
+                <p class="uppertitle uppertitle--mode-light">На латинском языке “барба” означает “борода”</p>
+                <h2 hidden>Примеры работ</h2>
+                <ul class="portfolio__list list card-set">
+                    <li class="portfolio__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-1_lg.webp 1x, ./images/portfolio/portfolio-1_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-1_lg.jpg 1x, ./images/portfolio/portfolio-1_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-1_md.webp 1x, ./images/portfolio/portfolio-1_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-1_md.jpg 1x, ./images/portfolio/portfolio-1_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-1_sm.webp 1x, ./images/portfolio/portfolio-1_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-1_sm.jpg 1x, ./images/portfolio/portfolio-1_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img src="./images/portfolio/portfolio-1_sm.jpg" alt="Пример работы 1" width="418"
+                                height="360" />
+                        </picture>
+                        <div class="overlay">
+                            <p class="overlay__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                                tenetur! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Ipsa, tenetur!</p>
+                        </div>
+                    </li>
+                    <li class="portfolio__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-2_lg.webp 1x, ./images/portfolio/portfolio-2_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-2_lg.jpg 1x, ./images/portfolio/portfolio-2_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-2_md.webp 1x, ./images/portfolio/portfolio-2_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-2_md.jpg 1x, ./images/portfolio/portfolio-2_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-2_sm.webp 1x, ./images/portfolio/portfolio-2_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-2_sm.jpg 1x, ./images/portfolio/portfolio-2_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="portfolio-pic" src="./images/portfolio/portfolio-2_sm.jpg" alt="Пример работы 2"
+                                width="418" height="360" />
+                        </picture>
+                        <div class="overlay">
+                            <p class="overlay__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                                tenetur! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Ipsa, tenetur!</p>
+                        </div>
+                    </li>
+                    <li class="portfolio__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-3_lg.webp 1x, ./images/portfolio/portfolio-3_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-3_lg.jpg 1x, ./images/portfolio/portfolio-3_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-3_md.webp 1x, ./images/portfolio/portfolio-3_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-3_md.jpg 1x, ./images/portfolio/portfolio-3_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-3_sm.webp 1x, ./images/portfolio/portfolio-3_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-3_sm.jpg 1x, ./images/portfolio/portfolio-3_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="portfolio-pic" src="./images/portfolio/portfolio-3_sm.jpg" alt="Пример работы 3"
+                                width="418" height="360" />
+                        </picture>
+                        <div class="overlay">
+                            <p class="overlay__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                                tenetur! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Ipsa, tenetur!</p>
+                        </div>
+                    </li>
+                    <li class="portfolio__item card-set__item">
+                        <picture>
+                            <!-- desktop screen -->
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-4_lg.webp 1x, ./images/portfolio/portfolio-4_lg@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/portfolio/portfolio-4_lg.jpg 1x, ./images/portfolio/portfolio-4_lg@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- tablet screen -->
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-4_md.webp 1x, ./images/portfolio/portfolio-4_md@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(min-width: 768px)"
+                                srcset="./images/portfolio/portfolio-4_md.jpg 1x, ./images/portfolio/portfolio-4_md@2x.jpg 2x"
+                                type="image/jpg" />
+
+                            <!-- mobile screen -->
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-4_sm.webp 1x, ./images/portfolio/portfolio-4_sm@2x.webp 2x"
+                                type="image/webp" />
+                            <source media="(max-width: 767px)"
+                                srcset="./images/portfolio/portfolio-4_sm.jpg 1x, ./images/portfolio/portfolio-4_sm@2x.jpg 2x"
+                                type="image/jpg" />
+                            <img class="portfolio-pic" src="./images/portfolio/portfolio-4_sm.jpg" alt="Пример работы 4"
+                                width="418" height="360" />
+                        </picture>
+                        <div class="overlay">
+                            <p class="overlay__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                                tenetur! Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Ipsa, tenetur!</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Секція Contacts -->
         <section class="contacts section">
-            <div class="container">
-            <div>
-                <h2 class="section-title section-title-mode-dark">Онлайн-запись</h2>
-                <form>Обратная связь</form>
-                <button class="btn btn-mode-dark" type="button">отправить</button>
-            </div>
-            <div>
-                <h2 class="section-title section-title-mode-dark">Контакты</h2>
-                <address class="contacts-address">
-                    <ul class="contacts-list list">
-                        <li class="contacts-item">
-                            <a class="contacts-link link" href="https://goo.gl/maps/YTrFUZCECfcr9nRA" target="_blank" rel="noopener noreferrer">
-                                <svg class="contacts-icon" width="24" height="24">
-                                    <use href="./images/spriteicon.svg#map-pin"></use>
-                                </svg>
-                                ул. Васильковая, 7А Киев, 08132</a>
-                        </li>
-                        <li class="contacts-item">
-                            <a class="contacts-link link" href="tel:+380441111111">
-                                <svg class="contacts-icon" width="24" height="24">
-                                    <use href="./images/spriteicon.svg#phone"></use>
-                                </svg>
-                                +38 044 111 11 11</a>
-                        </li>
-                        <li class="contacts-item">
-                            <a class="contacts-link link" href="mailto:barbershop@email.com">
-                                <svg class="contacts-icon" width="24" height="24">
-                                    <use href="./images/spriteicon.svg#mail"></use>
-                                </svg>
-                                barbershop@email.com</a>
-                        </li>
-                    </ul>
-                   
-                </address>
-
-                <h3 class="uppertitle uppertitle-mode-dark contatcs-uppertitle">время работы</h3>
-                <p class="contacts-scedule">
-                    Ежедневно с 
-                    <time datetime="09:00">9:00</time> 
-                    до 
-                    <time datetime="22:00">22:00</time> 
-                </p>
-            </div>
-            </div>
-        </section>
-
+				<div class="container contacts-container">
+					<div class="contacts-left-side">
+						<h2 class="title title--mode-dark">Онлайн-запись</h2>
+						<form name="contact-form" autocomplete="on" novalidate>
+							<div class="contact-form-wrapper">
+								<label class="contact-form-group">
+									<input
+										class="contact-form-field"
+										type="text"
+										name="user-name"
+										placeholder="Antony Black"
+										minlength="3"
+										required
+									/>
+									<span class="contact-form-label">Имя*</span>
+									<span class="contact-form-error">Минимальния длинна 3 символа</span>
+									<svg class="contact-form-error-icon" width="15" height="15">
+										<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+										<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+									</svg>
+								</label>
+								<label class="contact-form-group">
+									<input
+										class="contact-form-field"
+										type="phone"
+										name="user-phone"
+										placeholder="+38 (099) 123-45-67"
+										required
+										id="user-phone"
+									/>
+									<span class="contact-form-label">Телефон*</span>
+									<span class="contact-form-error">Введите телефон в указанном формате</span>
+									<svg class="contact-form-error-icon" width="15" height="15">
+										<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+										<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+									</svg>
+								</label>
+							</div>
+							<label class="contact-form-message-group">
+								<textarea
+									class="contact-form-message"
+									name="user-message"
+									rows="5"
+									placeholder="Enter your message"
+									minlength="3"
+								></textarea>
+								<span class="contact-form-label">Cообщение</span>
+								<span class="contact-form-error">Коментарий должен содержать от 3 до 1000 символов</span>
+								<svg class="contact-form-error-icon" width="20" height="20">
+									<use class="icon-attention" href="./images/icons.svg#icon-attention"></use>
+									<use class="icon-success" href="./images/icons.svg#icon-success"></use>
+								</svg>
+							</label>
+							<button class="btn btn--mode-dark" type="submit">отправить</button>
+						</form>
+					</div>
+					<div class="contacts-right-side">
+						<h2 class="title title--mode-dark">Контакты</h2>
+						<address class="contacts-address">
+							<ul class="contacts-list list">
+								<li class="contacts-item">
+									<a
+										class="contacts-link link"
+										href="https://goo.gl/maps/YTrfUZCEC6fcr9nRA"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										<svg class="contacts-icon" width="24" height="24">
+											<use href="./images/icons.svg#icon-map-pin"></use>
+										</svg>
+										ул. Васильковая, 7А Киев, 08132
+									</a>
+								</li>
+								<li class="contacts-item">
+									<a class="contacts-link link" href="tel:+380441111111">
+										<svg class="contacts-icon" width="24" height="24">
+											<use href="./images/icons.svg#icon-phone"></use>
+										</svg>
+										+38 044 111 11 11</a
+									>
+								</li>
+								<li class="contacts-item">
+									<a class="contacts-link link" href="mailto:barbershop@email.com">
+										<svg class="contacts-icon" width="24" height="24">
+											<use href="./images/icons.svg#icon-mail"></use>
+										</svg>
+										barbershop@email.com
+									</a>
+								</li>
+							</ul>
+						</address>
+						<h3 class="uppertitle uppertitle--mode-dark contatcs-uppertitle">время работы</h3>
+						<p class="contacts-scedule">
+							Ежедневно с
+							<time datetime="09:00">9:00</time>
+							до
+							<time datetime="22:00">22:00</time>
+						</p>
+					</div>
+				</div>
+			</section>
     </main>
 
-    <!--Секція Footer-->
+    <!-- Секція футер -->
     <footer class="footer">
-        <div class="container">
-        <p class="footer-copyright">&#169; Copyright 2020</p>
-        <ul class="list">
-            <li>
-                <a class="link sosials-link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
-            </li>
-            <li>
-                <a class="link sosials-link" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
-            </li>
-        </ul>
+			<div class="container">
+				<p class="footer-copyright">&#169; Copyright 2020</p>
+				<ul class="list">
+					<li>
+						<a class="link socials-link" href="" target="_blank" rel="noopener noreferrer">Instagram</a>
+					</li>
+					<li>
+						<a class="link socials-link" href="" target="_blank" rel="noopener noreferrer">Youtube</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+
+    <!-- Модальне вікно -->
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-close-btn" type="button" data-modal-close>
+                <svg width="20" height="20">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+
+            <form class="register-form">
+                <strong>Присоединяйтесь к нам!</strong>
+                <label>
+                    <span>Имя*</span>
+                    <input type="text" name="user-name" placeholder="" />
+
+                    <svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-user"></use>
+                    </svg>
+                </label>
+
+                <label>
+                    <span>Почта*</span>
+                    <input type="text" name="user-name" placeholder="" />
+
+                    <svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-mail"></use>
+                    </svg>
+                </label>
+
+                <label>
+                    <span>Пароль*</span>
+                    <input type="password" name="user-pass" />
+                    <svg width="20" height="20">
+                        <use href="./images/icons.svg#icon-unlock"></use>
+                        <use href="./images/icons.svg#icon-lock"></use>
+                    </svg>
+                </label>
+
+                <label for="user-location">Виберите район</label>
+                <select class="js-choice" id="user-location">
+                    <option>Шевченковский</option>
+                    <option>Соломянский</option>
+                    <option>Голосеевський</option>
+                    <option>Деснянский</option>
+                </select>
+
+                <div class="" role="group" aria-labelledby="payment-method">
+                    <p class="" id="payment-method">Виберите способ оплаты</p>
+                    <div class="payment-group">
+                        <label class="payment-label">
+                            <input class="visually-hidden payment-input" type="radio" name="user-payment" value="visa"
+                                checked required />
+                            <svg class="payment-icon" width="36" height="32">
+                                <use href="./images/icons.svg#icon-visa"></use>
+                            </svg>
+                        </label>
+                        <label class="payment-label">
+                            <input class="visually-hidden payment-input" type="radio" name="user-payment"
+                                value="mastercard" required />
+                            <svg class="payment-icon" width="36" height="32">
+                                <use href="./images/icons.svg#icon-mastercard"></use>
+                            </svg>
+                        </label>
+                    </div>
+                </div>
+
+                <label class="form-checkbox">
+                    <input class="visually-hidden form-checkbox-input" type="checkbox" name="user-agreement" checked />
+                    <span class="form-checkbox-custom-checkbox">
+                        <svg class="form-checkbox-icon" width="12" height="12">
+                            <use href="./images/icons.svg#icon-check"></use>
+                        </svg>
+                    </span>
+                    <span class="form-checkbox-agreement">Даю согласие на использование и обработку персональных
+                        данных</span>
+                </label>
+
+                <button type="submit">Зарегистрироваться</button>
+            </form>
         </div>
-    </footer>
+    </div>
+
+    <!-- Choices JavaScript (latest) start -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="./js/datalist.js"></script>
+    <!-- Choices JavaScript (latest) end -->
+
+    <!-- Inputmask start -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/inputmask/inputmask.min.js"
+        integrity="sha512-DVfS/GbZzLMmxBL/CW92N84eHP2Fq9d+r9RKbvctcvzISVfu+WvD+MCvbK9j8I6nVLrntGo3UUVrNFUDX0ukBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/input-mask.js"></script>
+    <!-- Inputmask end -->
+
+    <script src="./js/header-scroll.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
+
 </html>
