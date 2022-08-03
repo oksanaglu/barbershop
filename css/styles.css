@@ -15,7 +15,7 @@
 }
 
 .contacts-right-side {
-    flex-basis: 50%;
+    /* flex-basis: 50%; */
     margin-left: 100px;
 }
 
@@ -42,6 +42,8 @@
     display: flex;
     gap: 16px;
 }
+
+
 
 .contacts-scedule {
     font-size: 18px;
